@@ -1,0 +1,151 @@
+%% ****** Start of file aiptemplate.tex ****** %
+%%
+%%   This file is part of the files in the distribution of AIP substyles for REVTeX4.
+%%   Version 4.1 of 9 October 2009.
+%%
+%
+% This is a template for producing documents for use with 
+% the REVTEX 4.1 document class and the AIP substyles.
+% 
+% Copy this file to another name and then work on that file.
+% That way, you always have this original template file to use.
+
+\documentclass[aip,graphicx,amsmath,amssymb,reprint]{revtex4-1}
+%\documentclass[aip,reprint]{revtex4-1}
+
+\usepackage{graphicx}% Include figure files
+\usepackage{dcolumn}% Align table columns on decimal point
+\usepackage{bm}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+%\usepackage{mathptmx} %Can cause issues with boldness but allows Times New Roman font for math
+\usepackage{newtxtext,newtxmath}
+\usepackage{etoolbox}
+\usepackage{ccicons}
+
+\newenvironment{smallequation}{\footnotesize\begin{equation}}{\end{equation}\quad}
+
+\draft % marks overfull lines with a black rule on the right
+
+\begin{document}
+
+% Use the \preprint command to place your local institutional report number 
+% on the title page in preprint mode.
+% Multiple \preprint commands are allowed.
+%\preprint{}
+
+\title[Bessel Functions]{Bessel Functions: Overview and Applications in Physics} %Title of paper
+
+% repeat the \author .. \affiliation  etc. as needed
+% \email, \thanks, \homepage, \altaffiliation all apply to the current author.
+% Explanatory text should go in the []'s, 
+% actual e-mail address or url should go in the {}'s for \email and \homepage.
+% Please use the appropriate macro for the type of information
+
+% \affiliation command applies to all authors since the last \affiliation command. 
+% The \affiliation command should follow the other information.
+
+\author{Mareem Almosawi}
+\altaffiliation{Team Lead and Project Coordinator}
+\email{malmosaw@asu.edu}
+\author{Jun Matsumoto}
+\email{jmatsum2@asu.edu}
+\author{Wesley Winter}
+\email{wgwinter@asu.edu}
+\affiliation{Arizona State University, College of Liberal Arts and Sciences; Department of Physics, 550 E Tyler Mall, Tempe, Arizona, 85281}
+
+% Collaboration name, if desired (requires use of superscriptaddress option in \documentclass). 
+% \noaffiliation is required (may also be used with the \author command).
+%\collaboration{}
+%\noaffiliation
+
+\date{\today}
+
+\begin{abstract}
+Insert abstract here 
+\end{abstract}
+
+\pacs{02.30.Jr}% insert suggested PACS numbers in braces on next line
+
+\maketitle %\maketitle must follow title, authors, abstract and \pacs
+
+% Body of paper goes here. Use proper sectioning commands. 
+%\section{\label{sec:level1}}
+%\subsection{\label{sec:level2}}
+%\subsubsection{\label{sec:level3}}
+% References should be done using the \cite, \ref, and \label commands
+
+\section{Introduction}
+Place Holder Text
+\subsection{The Wave Equation}
+Place Holder Text
+\subsection{Bessel's Representation}
+Place Holder Text
+
+\section{Solving Bessel’s Equation}
+Place Holder Text
+\subsection{Bessel Function's and Their Properties}
+Place Holder Text
+
+\section{Bessel Function Applications}
+Drum Head Reference...
+\subsection{Electrostatic Potential in a Cylindrical Cavity with Conducting Walls}
+%place holder prompt
+A cylindrical cavity, of radius \(a\) and height \(h\), has conducting walls. Its circular ends,
+at \(z = 0\) and \(z = h\), are insulated from the cylindrical sleeve and are held at zero potential. The sleeve is held at a constant non-zero potential \(V_{0}\). Show that the electrostatic potential within the cavity, \(V \left(\rho, \varphi, z\right)\), which obeys Laplace’s equation, is
+
+\begin{smallequation}
+\label{eq:Electrostatic_Potential_Laplace_Form}
+     V \left(\rho, \varphi, z\right) = \frac{4 V_{0}}{\pi} \sum^{\infty}_{n = 0} \frac{I_{0}\left( \left(2n + 1\right)\pi \frac{\rho}{h} \right)}{\left(2n + 1\right) I_{0}\left( \left(2n + 1\right)\pi \frac{a}{h} \right)} \sin \ {\left( \left(2n + 1\right)\pi \frac{z}{h} \right)}
+\end{smallequation}
+
+\subsection{Oscillatory Modes of a Vertically Suspended Flexible Chain}
+%place holder prompt
+A heavy flexible chain of length \(l\) and weight \(w\) hangs vertically. Its lower end is free
+to move. Find the chain’s natural frequencies of oscillation. (Assume small oscillations, i.e., each
+particle of the chain oscillates in a horizontal line.)
+
+
+% If in two-column mode, this environment will change to single-column format so that long equations can be displayed. 
+% Use only when necessary.
+%\begin{widetext}
+%$$\mbox{put long equation here}$$
+%\end{widetext}
+
+% Figures should be put into the text as floats. 
+% Use the graphics or graphicx packages (distributed with LaTeX2e).
+% See the LaTeX Graphics Companion by Michel Goosens, Sebastian Rahtz, and Frank Mittelbach for examples. 
+%
+% Here is an example of the general form of a figure:
+% Fill in the caption in the braces of the \caption{} command. 
+% Put the label that you will use with \ref{} command in the braces of the \label{} command.
+%
+% \begin{figure}
+% \includegraphics{}%
+% \caption{\label{}}%
+% \end{figure}
+
+% Tables may be be put in the text as floats.
+% Here is an example of the general form of a table:
+% Fill in the caption in the braces of the \caption{} command. Put the label
+% that you will use with \ref{} command in the braces of the \label{} command.
+% Insert the column specifiers (l, r, c, d, etc.) in the empty braces of the
+% \begin{tabular}{} command.
+%
+% \begin{table}
+% \caption{\label{} }
+% \begin{tabular}{}
+% \end{tabular}
+% \end{table}
+
+% If you have acknowledgments, this puts in the proper section head.
+\begin{acknowledgments}
+This document was prepared in compliance with the coursework requirements for the Mathematical Methods in Physics II course offered by the Department of Physics, taught by Dr. Carl Covatto at Arizona State University. The content is protected under copyright regulations licensed under CC BY-NC-SA 4.0 \ccLogo \ \ccAttribution \ \ccNonCommercial \ \ccShareAlike.
+\end{acknowledgments}
+
+% Create the reference section using BibTeX:
+\bibliography{project_references}
+
+\end{document}
+%
+% ****** End of file aiptemplate.tex ******
